@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Admin Login - Sari-Sari Store</title>
+
+    <!-- Manrope Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Existing CSS -->
+    <link rel="stylesheet" href="/style.css">
+
+    <style>
+        .login-error {
+            color: #ff8f8f;
+            background: rgba(255, 90, 90, 0.12);
+            border: 1px solid rgba(255, 90, 90, 0.35);
+            border-radius: 8px;
+            padding: 10px 14px;
+            font-size: 13px;
+            margin-bottom: 18px;
+        }
+        .login-error:empty {
+            display: none;
+            padding: 0;
+            margin: 0;
+            border: none;
+        }
+    </style>
+
+</head>
+
+<body class="login-page">
+
+    <!-- ========================================
+         LOGIN CONTAINER
+         ======================================== -->
+
+    <div class="login-container">
+
+        <!-- ========================================
+             LOGIN BRAND
+             ======================================== -->
+
+        <div class="login-brand">
+
+            <div class="login-icon">
+                S
+            </div>
+
+            <h1>Sari-Sari Store</h1>
+
+            <p>Inventory Management System</p>
+
+        </div>
+
+
+        <!-- ========================================
+             LOGIN ERROR
+             ======================================== -->
+
+        <div class="login-error">{{ERROR}}</div>
+
+
+        <!-- ========================================
+             LOGIN FORM
+             ======================================== -->
+
+        <form class="login-form" method="POST" action="/login">
+
+            <label for="username">
+                Username
+            </label>
+
+            <input
+                type="text"
+                id="username"
+                name="username"
+                placeholder="Enter admin username"
+                required
+            >
+
+
+            <label for="password">
+                Password
+            </label>
+<!-- Password field -->
+<!-- Password field -->
+<div class="password-container">
+
+    <!-- Password input -->
+    <input
+        type="password"
+        id="password"
+        name="password"
+        placeholder="Enter admin password"
+        required
+    >
+    <!-- Show/hide password button -->
+    <button
+        type="button"
+        id="password-toggle"
+        class="password-toggle"
+        aria-label="Show password"
+        onclick="
+            var p = document.getElementById('password');
+
+            if (p.type === 'password') {
+                p.type = 'text';
+            } else {
+                p.type = 'password';
+            }
+        "
+    >
+
+        <!-- Eye icon -->
+        <svg
+            id="eye-open"
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+        >
+            <path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0"/>
+            <circle cx="12" cy="12" r="3"/>
+        </svg>
+
+    </button>
+
+</div>
+
+<!-- Login button -->
+<button type="submit" class="login-button">
+    Login
+</button>
+
+        <!-- ========================================
+             LOGIN FOOTER
+             ======================================== -->
+
+        <div class="login-footer">
+            Admin access only
+        </div>
+
+    </div>
+<script>
+
+// Show or hide the password.
+function togglePassword() {
+
+    // Get the password input.
+    var password = document.getElementById("password");
+
+    // Get the eye icons.
+    var eyeOpen = document.getElementById("eye-open");
+    var eyeClosed = document.getElementById("eye-closed");
+
+    // Toggle the password.
+    if (password.getAttribute("type") === "password") {
+
+        // Show password.
+        password.setAttribute("type", "text");
+
+        // Change icon.
+        eyeOpen.style.display = "none";
+        eyeClosed.style.display = "block";
+
+    } else {
+
+        // Hide password.
+        password.setAttribute("type", "password");
+
+        // Change icon.
+        eyeOpen.style.display = "block";
+        eyeClosed.style.display = "none";
+    }
+}
+
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,818 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap');
+
+body {
+    font-family: "Manrope", sans-serif;
+    padding:15px;
+}
+.container {
+    max-width: 900px;
+    margin: auto;
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+}
+
+h1 { text-align: center; }
+h2 { text-align: center; }
+
+.menu {
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.menu a {
+    padding: 20px;
+    background: #dff0ff;
+    border-radius: 10px;
+    text-decoration: none;
+    color: black;
+    text-align: center;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0 15px;
+    box-sizing: border-box;
+}
+
+button {
+    padding: 12px 20px;
+    border: 0;
+    border-radius: 8px;
+    background: #8de39b;
+    cursor: pointer;
+}
+
+a {
+    display: inline-block;
+    margin-top: 15px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 12px;
+    text-align: left;
+}
+
+th { background: #171e2d;
+     color: #b8c4d6 ; }
+
+.warning {
+    background: #ffe0a8;
+    padding: 15px;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    font-family: -apple-system, "Segoe UI", Arial, sans-serif;
+    background: #0b0f19;
+    color: #e5e7eb;
+}
+
+.app {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+    height: 800px;
+    color: #161b28;
+    width: 230px;
+    flex-shrink: 0;
+    background: #10141f;
+    border-right: 1px solid #1f2534;
+    padding: 16px 16px;
+    transition: transform 0.2s ease-out;
+   
+}
+.sidebar:hover{
+      transform: translateX(5px);
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 17px;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 30px;
+    padding: 0 6px;
+}
+
+.brand-icon {
+    width: 30px;
+    height: 30px;
+    background: #3b82f6;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 14px;
+}
+
+.nav a {
+    display: block;
+    padding: 10px 14px;
+    border-radius: 8px;
+    color: #9aa4b2;
+    text-decoration: none;
+    font-size: 14px;
+    margin-bottom: 4px;
+}
+
+.nav a:hover {
+    background: #182a64;
+    color: #ffffff;
+    transform: translateX(3px);
+}
+
+/* Main content */
+.content {
+    flex: 8;
+    padding: 32px 40px;
+    max-width: none;
+    position: relative;
+}
+h1 {
+    color: #ffffff;
+    font-size: 22px;
+    margin: 0 0 4px 0;
+    text-align: left;
+}
+
+h2 {
+    color: #9aa4b2;
+    font-weight: 400;
+    font-size: 14px;
+    margin: 0 0 20px 0;
+    text-align: left;
+}
+
+/* Stat cards */
+.stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin: 20px 0 28px 0;
+}
+
+.stat-card {
+    background: #161b28;
+    border: 1px solid #232a3b;
+    border-radius: 12px;
+    padding: 18px 20px;
+}
+.stat-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+.stat-link:hover {
+    color: inherit;
+}
+
+.stat-card .label {
+    color: #9aa4b2;
+    font-size: 13px;
+    margin-bottom: 8px;
+}
+
+.stat-card .value {
+    color: #ffffff;
+    font-size: 26px;
+    font-weight: 600;
+}
+
+/* Panels / cards */
+.panel {
+    background: #161b28;
+    border: 1px solid #232a3b;
+    border-radius: 12px;
+    padding: 24px;
+}
+
+.panel-title {
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+/* Quick-action buttons on the dashboard */
+.menu {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.menu a {
+    padding: 16px 18px;
+    background: #1a2233;
+    border: 1px solid #232a3b;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #e5e7eb;
+    font-size: 14px;
+}
+
+.menu a:hover {
+    background: #212a3f;
+    border-color: #3b82f6;
+    background: hsla(219, 100%, 18%, 0.397);
+}
+
+/* Forms */
+form {
+    max-width: 420px;
+}
+
+label {
+    display: block;
+    color: #9aa4b2;
+    font-size: 13px;
+    margin-bottom: 6px;
+}
+
+input {
+    width: 100%;
+    padding: 10px 12px;
+    margin: 0 0 16px 0;
+    background: #0f141f;
+    border: 1px solid #232a3b;
+    color: #e5e7eb;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+input:focus {
+    outline: none;
+    border-color: #3b82f6;
+}
+
+button {
+    padding: 12px 22px;
+    border: 0;
+    border-radius: 8px;
+    background: #3b82f6;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #2563eb;
+}
+
+/* Plain links (Return to Main Menu, etc.) */
+a {
+    color: #3b82f6;
+}
+
+a.back-link {
+    display: inline-block;
+    margin-top: 18px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+a.back-link:hover {
+    color: #2563eb;
+}
+
+/* Tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+th, td {
+    padding: 14px 16px;
+    text-align: left;
+    border-bottom: 1px solid #232a3b;
+}
+
+th {
+    color: #4d6b96;
+    font-weight: 500;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+/* Status badges */
+.badge {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.badge-green {
+    background: rgba(34, 197, 94, 0.15);
+    color: #4ade80;
+}
+
+.badge-red {
+    background: rgb(51, 15, 15);
+    color: red;
+}
+.badge-orange {
+    background-color: rgb(104, 71, 10);
+    color: rgb(255, 145, 0);
+}
+/* Warning banner (low stock) */
+.warning {
+    background: rgba(249, 115, 22, 0.1);
+    border: 1px solid rgba(249, 115, 22, 0.3);
+    color: #fb923c;
+    padding: 14px 18px;
+    border-radius: 10px;
+    margin: 0 0 20px 0;
+    font-size: 14px;
+}
+.sidebar{
+
+    border-radius: 20px;
+     
+}
+th:hover{
+
+color: #182a64;
+}
+.panel:hover{
+      transform: translateY(-10px);
+}
+.panel{
+    transition: 0.3s;
+}
+.stat-card:hover{
+      transform: translateY(-10px);
+}
+/* Scrollable table (used by Stock History) - pure CSS, no JS */
+.table-scroll {
+    max-height: 420px;
+    overflow-y: auto;
+    border: 1px solid #030e2b;
+    border-radius: 10px;
+}
+.table-scroll table {
+    margin-top: 0;
+}
+.table-scroll thead th {
+    position: sticky;
+    top: 0;
+    background: #171e2d;
+    color: #b8c4d6;
+    z-index: 1;
+}
+.table-scroll::-webkit-scrollbar {
+    width: 10px;
+}
+.table-scroll::-webkit-scrollbar-thumb {
+    background: #232a3b;
+    border-radius: 10px;
+}
+.stat-card{
+    transition: 0.2s;
+}
+.navi:hover{
+      transform: translateY(-10px);
+}
+.navi{
+    transition: 0.2s;
+}
+
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.dashboard-header h1 {
+    margin: 0 0 5px 0;
+}
+
+.dashboard-header p {
+    margin: 0 0 10px 0;
+}
+
+.dashboard-header h2 {
+    margin: 0;
+}
+
+.dashboard-search {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.dashboard-search input {
+    width: 260px;
+    margin: 0;
+}
+
+.dashboard-search button {
+    white-space: nowrap;
+}
+.dashboard-layout {
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 20px;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.dashboard-main {
+    flex: 1 !important;
+    min-width: 0;
+}
+
+.store-image {
+    width: 280px !important;
+    height: 650px !important;
+    flex: 0 0 280px !important;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.store-image img {
+    width: 100%;
+    height: 635px;
+    object-fit: cover;
+    border-radius: 18px;
+
+    opacity: 0.75;
+    filter: blur(2px);
+}
+
+.quick-actions {
+    display: flex;
+    gap: 15px;
+    margin: 18px 0;
+}
+
+.quick-action {
+    flex: 1;
+    padding: 14px 20px;
+    border: 1px solid #273044;
+    border-radius: 10px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 600;
+    color: white;
+    background: #151b29;
+    transition: 0.2s;
+}
+
+.quick-action:hover {
+    background: #20283a;
+    transform: translateY(-2px);
+}
+
+.add-action {
+    border-color: #2563eb;
+}
+
+
+.update-action {
+    border-color: #16a34a;
+}
+
+.delete-action {
+    border-color: #dc2626;
+}
+.pdf-action {
+    border-color:blueviolet
+}
+
+.quick-action {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    text-align: center;
+}
+
+.quick-action {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.quick-action {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.history-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 5px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.history-title svg {
+    width: 24px;
+    height: 24px;
+}
+
+/* ========================================
+   LOGIN PAGE
+   ======================================== */
+
+.login-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+
+/* ========================================
+   LOGIN CONTAINER
+   ======================================== */
+
+.login-container {
+    width: 100%;
+    max-width: 420px;
+    background: #161b28;
+    border: 1px solid #232a3b;
+    border-radius: 16px;
+    padding: 35px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+}
+
+
+/* ========================================
+   LOGIN BRAND
+   ======================================== */
+
+.login-brand {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.login-icon {
+    width: 50px;
+    height: 50px;
+    margin: 0 auto 15px auto;
+
+    background: #3b82f6;
+    border-radius: 12px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.login-brand h1 {
+    text-align: center;
+    color: #ffffff;
+    font-size: 22px;
+    margin: 0 0 5px 0;
+}
+
+.login-brand p {
+    color: #9aa4b2;
+    font-size: 14px;
+    margin: 0;
+}
+
+
+/* ========================================
+   LOGIN FORM
+   ======================================== */
+
+.login-form {
+    max-width: none;
+}
+
+.login-form label {
+    color: #b8c4d6;
+    margin-bottom: 7px;
+}
+
+.login-form input {
+    width: 100%;
+    margin-bottom: 18px;
+}
+
+.login-button {
+    width: 100%;
+    margin-top: 5px;
+}
+
+
+/* ========================================
+   LOGIN FOOTER
+   ======================================== */
+
+.login-footer {
+    text-align: center;
+    margin-top: 25px;
+    color: #667085;
+    font-size: 12px;
+}
+
+/* ========================================
+   PASSWORD SHOW / HIDE
+   ======================================== */
+
+/* Password field container */
+.password-container {
+    position: relative;
+    width: 100%;
+}
+
+/* Password input */
+.password-container input {
+    width: 100%;
+    padding-right: 45px;
+    box-sizing: border-box;
+}
+
+/* Eye button */
+.password-toggle {
+    position: absolute !important;
+
+    /* Center vertically inside the input */
+    top: 40% !important;
+    right: 8px !important;
+    transform: translateY(-50%) !important;
+
+    /* Prevent existing button CSS from affecting it */
+    width: 30px !important;
+    height: 30px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+
+    /* Put the icon in the center */
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    /* Make sure it can be clicked */
+    z-index: 10 !important;
+    pointer-events: auto !important;
+
+    color: #888;
+    cursor: pointer;
+}
+
+/* Eye hover */
+.password-toggle:hover {
+    background: transparent !important;
+    color: white;
+}
+
+/* Eye SVG */
+.password-toggle svg {
+    width: 20px;
+    height: 20px;
+    display: block;
+    pointer-events: none;
+}
+
+/* ========================================
+   STOCK HISTORY PDF REPORT PAGE
+   ======================================== */
+
+.pdf-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.pdf-container {
+    width: 100%;
+    max-width: 500px;
+    background: #161b28;
+    border: 1px solid #232a3b;
+    border-radius: 16px;
+    padding: 35px;
+    text-align: center;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+}
+
+.pdf-icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 20px auto;
+
+    background: rgba(59, 130, 246, 0.15);
+    border: 1px solid #3b82f6;
+    border-radius: 14px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #3b82f6;
+}
+
+.pdf-icon svg {
+    width: 30px;
+    height: 30px;
+}
+
+.pdf-container h1 {
+    color: #ffffff;
+    font-size: 22px;
+    text-align: center;
+    margin: 0 0 8px 0;
+}
+
+.pdf-container p {
+    color: #9aa4b2;
+    font-size: 14px;
+    margin: 0 0 25px 0;
+}
+
+.pdf-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.pdf-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+
+    padding: 12px 20px;
+
+    border-radius: 8px;
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    transition: 0.2s;
+}
+
+.pdf-primary {
+    background: #3b82f6;
+    color: #ffffff;
+}
+
+.pdf-primary:hover {
+    background: #2563eb;
+    transform: translateY(-2px);
+}
+
+.pdf-secondary {
+    background: #151b29;
+    border: 1px solid #273044;
+    color: #e5e7eb;
+}
+
+.pdf-secondary:hover {
+    background: #20283a;
+    border-color: #3b82f6;
+    transform: translateY(-2px);
+}
