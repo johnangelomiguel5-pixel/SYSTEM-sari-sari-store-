@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Recovery PIN - Sari-Sari Store</title>
+
+    <link rel="stylesheet" href="/style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body class="login-page">
+    <div class="login-container">
+      <div class="login-brand">
+        <div class="login-icon">S</div>
+
+        <h1>Sari-Sari Store</h1>
+
+        <p>Inventory Management System</p>
+      </div>
+
+      <div class="login-error">{{ERROR}}</div>
+
+      <form class="login-form" method="POST" action="/verify-recovery-pin">
+        <label for="pin"> Recovery PIN </label>
+
+        <input
+          type="password"
+          id="pin"
+          name="pin"
+          placeholder="Enter your recovery PIN"
+          inputmode="numeric"
+          autocomplete="off"
+          required
+        />
+
+        <input type="hidden" name="username" value="{{USERNAME}}" />
+
+        <button type="submit" class="login-button">Verify PIN</button>
+      </form>
+
+      <div style="text-align: center; margin-top: 18px">
+        <a
+          href="/forgot-password"
+          style="color: #3b82f6; text-decoration: none; font-size: 13px"
+        >
+          Back
+        </a>
+      </div>
+
+      <div class="login-footer">Password Recovery</div>
+    </div>
+  </body>
+</html>
