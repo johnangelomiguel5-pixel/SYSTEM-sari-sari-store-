@@ -1,15 +1,56 @@
 <h1>View Products</h1>
-<table>
-  <tr>
-    <th>ID</th>
-    <th>Name</th>
-    <th>Category</th>
-    <th>Price</th>
-    <th>Stock</th>
-  </tr>
-  {{ROWS}}
-</table>
-<br />
-<h2>All items currently in inventory</h2>
+<h2>Search, edit, or delete items in your inventory</h2>
 
-<a class="back-link" href="/"><button type="return">to Main Menu</button></a>
+<!-- Search + category filter (a normal GET form: works without JavaScript) -->
+<form class="filter-bar" method="GET" action="/products">
+  <div class="field grow">
+    <label for="q">Search by name</label>
+    <input type="search" id="q" name="q" value="{{Q}}" placeholder="e.g. Piattos" maxlength="99" />
+  </div>
+  <div class="field grow">
+    <label for="category">Category</label>
+    <select id="category" name="category">
+      <option value="">All categories</option>
+      {{CATEGORY_OPTIONS}}
+    </select>
+  </div>
+  <div class="field actions">
+    <button type="submit">Filter</button>
+    <a class="btn btn-secondary" href="/products">Reset</a>
+  </div>
+</form>
+
+<!-- Tick products, then delete them. The server asks "Are you sure?" first. -->
+<form class="bulk-form" method="POST" action="/delete-selected">
+  <div class="bulk-bar">
+    <span class="bulk-count">Showing <b>{{SHOWN}}</b> of {{TOTAL}} product{{PLURAL}}</span>
+    <span class="bulk-actions">
+      <a class="btn btn-secondary btn-small" href="{{SELECT_ALL_URL}}">Select all {{SHOWN}} shown</a>
+      <a class="btn btn-secondary btn-small" href="{{CLEAR_URL}}">Clear selection</a>
+      <button type="submit" class="btn btn-danger btn-small">Delete selected</button>
+    </span>
+  </div>
+  <p class="hint">
+    &ldquo;Select all&rdquo; ticks only the products shown by your current search and category.
+    To delete a whole category, pick the category, press Select all, then Delete selected.
+  </p>
+
+  <table class="responsive-table products-table">
+    <thead>
+      <tr>
+        <th class="col-check">Select</th>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Category</th>
+        <th>Price</th>
+        <th>Stock</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{ROWS}}
+    </tbody>
+  </table>
+</form>
+
+<a class="back-link" href="/"><button type="button" class="btn-secondary">to Main Menu</button></a>

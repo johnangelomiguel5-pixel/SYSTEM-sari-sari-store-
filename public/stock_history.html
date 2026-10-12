@@ -19,8 +19,31 @@
 </h1>
 <h2>Every stock quantity change, most recent first</h2>
 
+<!-- PDF report for a chosen date range -->
+<section class="panel report-panel" id="report">
+  <h3 class="panel-title">Stock history PDF report</h3>
+  <form class="report-form" method="GET" action="/generate-stock-history-pdf">
+    <div class="field">
+      <label for="from">From</label>
+      <input type="date" id="from" name="from" min="2000-01-01" max="2100-12-31" required />
+    </div>
+    <div class="field">
+      <label for="to">To</label>
+      <input type="date" id="to" name="to" min="2000-01-01" max="2100-12-31" required />
+    </div>
+    <div class="field actions">
+      <button type="submit">Generate PDF</button>
+    </div>
+  </form>
+  <p class="hint">
+    Both days are included: from the start of the first day to the end of the last day
+    (store computer time). Example: From 2026-07-01 To 2026-08-25.
+    <a href="/generate-stock-history-pdf">Generate a report of all records</a> instead.
+  </p>
+</section>
+
 <div class="table-scroll">
-<table>
+<table class="responsive-table">
 <thead>
 <tr><th>Timestamp</th><th>ID</th><th>Name</th><th>Old Stock</th><th>New Stock</th><th>Change</th></tr>
 </thead>
@@ -30,4 +53,4 @@
 </table>
 </div>
 
-<a class="back-link" href="/"><button type="button">to Main Menu</button></a>
+<a class="back-link" href="/"><button type="button" class="btn-secondary">to Main Menu</button></a>

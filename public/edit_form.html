@@ -1,0 +1,26 @@
+<h1>Edit Product</h1>
+<h2>Product ID {{ID}}</h2>
+
+<form class="card-form" method="POST" action="/edit">
+  <input type="hidden" name="id" value="{{ID}}" />
+
+  <label for="name">Product Name</label>
+  <input type="text" id="name" name="name" value="{{NAME}}" maxlength="99" required />
+
+  <label for="category">Category</label>
+  <input type="text" id="category" name="category" value="{{CATEGORY}}" list="category-list" maxlength="49" required />
+  <datalist id="category-list">{{CATEGORY_OPTIONS}}</datalist>
+
+  <label for="price">Price (&#8369;)</label>
+  <input type="number" id="price" name="price" step="0.01" min="0" value="{{PRICE}}" required />
+
+  <label for="stock">Stock</label>
+  <input type="number" id="stock" name="stock" step="1" min="0" value="{{STOCK}}" required />
+
+  <p class="hint">Only a change to the stock quantity is recorded in the stock history.</p>
+
+  <div class="form-actions">
+    <button type="submit">Save changes</button>
+    <a class="btn btn-secondary" href="/products">Cancel</a>
+  </div>
+</form>
