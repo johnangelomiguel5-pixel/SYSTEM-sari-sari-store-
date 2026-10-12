@@ -1,7 +1,13 @@
 <h1>Product Found!</h1>
-<p><b>ID:</b> {{ID}}</p>
-<p><b>Name:</b> {{NAME}}</p>
-<p><b>Category:</b> {{CATEGORY}}</p>
-<p><b>Price:</b> {{PRICE}}</p>
-<p><b>Stock:</b> {{STOCK}}</p>
-<br /><a href="/search">Search Again</a><br /><a href="/">Main Menu</a>
+<div class="panel detail-card">
+  <p><b>ID:</b> {{ID}}</p>
+  <p><b>Name:</b> <span class="cell-name">{{NAME}}</span></p>
+  <p><b>Category:</b> {{CATEGORY}}</p>
+  <p><b>Price:</b> &#8369;{{PRICE}}</p>
+  <p><b>Stock:</b> {{STOCK}}</p>
+</div>
+<p class="message-links">
+  <a class="btn" href="/edit?id={{ID}}">Edit this product</a>
+  <a class="btn btn-secondary" href="/search">Search Again</a>
+  <a class="btn btn-secondary" href="/">Main Menu</a>
+</p>

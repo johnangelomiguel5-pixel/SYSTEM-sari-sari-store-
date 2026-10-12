@@ -1,21 +1,24 @@
 <h1>Add Product</h1>
+<h2>New items start with the stock you enter below</h2>
 
-<form method="POST" action="/add">
-  <label>Product Name</label>
-  <input type="text" name="name" required />
+<form class="card-form" method="POST" action="/add">
+  <label for="name">Product Name</label>
+  <input type="text" id="name" name="name" maxlength="99" required />
 
-  <label>Category</label>
-  <input type="text" name="category" required />
+  <label for="category">Category</label>
+  <input type="text" id="category" name="category" maxlength="49" required />
 
-  <label>Price</label>
-  <input type="number" step="0.01" name="price" min="0" required />
+  <label for="price">Price (&#8369;)</label>
+  <input type="number" id="price" step="0.01" name="price" min="0" required />
 
-  <label>Stock</label>
-  <input type="number" name="stock" min="0" required />
+  <label for="stock">Stock</label>
+  <input type="number" id="stock" name="stock" min="0" required />
 
-  <button type="submit">Add Product</button>
+  <div class="form-actions">
+    <button type="submit">Add Product</button>
+  </div>
 </form>
 
-<a href="/">
-  <button type="return">Return to Main Menu</button>
+<a class="back-link" href="/">
+  <button type="button" class="btn-secondary">Return to Main Menu</button>
 </a>

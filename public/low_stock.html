@@ -1,11 +1,11 @@
 <h1>Check Low Stock</h1>
 <div class="warning"><b>Low Stock Items!</b><br>
 Products with stock less than or equal to {{LIMIT}}.</div>
-<table>
-<tr><th>ID</th><th>Name</th><th>Stock</th></tr>
+<table class="responsive-table">
+<thead><tr><th>ID</th><th>Name</th><th>Stock</th></tr></thead>
+<tbody>
 {{ROWS}}
+</tbody>
 </table>
-<br>
 
-<a class="back-link" href="/"><button type="return">Return to Main Menu</button>
-</a>
+<a class="back-link" href="/"><button type="button" class="btn-secondary">Return to Main Menu</button></a>

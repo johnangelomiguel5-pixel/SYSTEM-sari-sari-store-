@@ -1,0 +1,18 @@
+<h1>Confirm Delete</h1>
+<p class="message-box message-error">
+  Are you sure you want to delete {{COUNT}} selected product{{PLURAL}}?
+  This action cannot be undone.
+</p>
+
+<ul class="confirm-list">
+  {{LIST}}
+</ul>
+
+<form class="confirm-form" method="POST" action="/delete-selected">
+  {{HIDDEN}}
+  <input type="hidden" name="confirm" value="1" />
+  <div class="form-actions">
+    <button type="submit" class="btn-danger">Yes, delete {{COUNT}} product{{PLURAL}}</button>
+    <a class="btn btn-secondary" href="/products">Cancel</a>
+  </div>
+</form>

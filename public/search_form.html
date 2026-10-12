@@ -1,6 +1,7 @@
 <h1>Search Product</h1>
-<form method="GET" action="/search">
-  <label>Enter Product ID:</label><input type="number" name="id" required />
-  <button type="submit">Search</button>
+<form class="card-form" method="GET" action="/search">
+  <label for="id">Enter Product ID</label>
+  <input type="number" id="id" name="id" min="1" required />
+  <div class="form-actions"><button type="submit">Search</button></div>
 </form>
-<a href="/"><button type="return">Return to Main Menu</button></a>
+<a class="back-link" href="/"><button type="button" class="btn-secondary">Return to Main Menu</button></a>

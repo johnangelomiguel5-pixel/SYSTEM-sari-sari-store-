@@ -3,6 +3,8 @@
 
 <head>
 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Admin Login - Sari-Sari Store</title>
 
     <!-- Manrope Font -->
@@ -14,23 +16,7 @@
     <!-- Existing CSS -->
     <link rel="stylesheet" href="/style.css">
 
-    <style>
-        .login-error {
-            color: #ff8f8f;
-            background: rgba(255, 90, 90, 0.12);
-            border: 1px solid rgba(255, 90, 90, 0.35);
-            border-radius: 8px;
-            padding: 10px 14px;
-            font-size: 13px;
-            margin-bottom: 18px;
-        }
-        .login-error:empty {
-            display: none;
-            padding: 0;
-            margin: 0;
-            border: none;
-        }
-    </style>
+    <!-- Login message styles now live in style.css -->
 
 </head>
 
@@ -64,6 +50,8 @@
              ======================================== -->
 
         <div class="login-error">{{ERROR}}</div>
+
+        <div class="login-notice">{{NOTICE}}</div>
 
 
         <!-- ========================================
